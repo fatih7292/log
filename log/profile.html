@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG — Профиль Berik Lyubovsky</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+    <!-- Header (такая же как на основной) -->
+    <header class="header">
+        <div class="header-content">
+            <div class="logo-block">
+                <h1 class="logo">LOG</h1>
+                <h3 class="">by mason_lover
+
+                </h3>
+                <span class="logo-subtitle">Личный профиль объекта</span>
+            </div>
+            <div class="admin-profile" onclick="window.location.href='index.html'">
+            
+    <img src="IMG_0095.PNG" alt="Иконка" class="left-icon">
+                <div class="avatar-wrapper">
+                    <img src="photo_5291985963577973198_w.jpg" alt="Оператор" class="avatar">
+                    <span class="status-indicator"></span>
+                </div>
+                <div class="admin-info">
+                    <span class="admin-name">Оператор</span>
+                    <span class="admin-role">Назад к мониторингу</span>
+                </div>
+            </div>
+        </div>
+        <canvas id="waveCanvas" class="wave-canvas"></canvas>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Profile Header -->
+        <section class="profile-header-section">
+            <div class="profile-card">
+                <div class="profile-main">
+                    <div class="profile-avatar-large">BL</div>
+                    <div class="profile-info">
+                        <h2 class="profile-name">Berik Lyubovsky</h2>
+                        <p class="profile-id">ID: usr_1111</p>
+                        <div class="profile-meta">
+                            <span class="profile-status online">● Онлайн</span>
+                            <span class="profile-platforms">META: ins</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="profile-stats-row">
+                    <div class="profile-stat">
+                        <span class="profile-stat-value">65</span>
+                        <span class="profile-stat-label">not</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="profile-stat-value">1,289</span>
+                        <span class="profile-stat-label">not</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="profile-stat-value">38</span>
+                        <span class="profile-stat-label">not</span>
+                    </div>
+                    <div class="profile-stat">
+                        <span class="profile-stat-value">89</span>
+                        <span class="profile-stat-label">Сессий</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Tools Buttons -->
+        <section class="ai-tools-section">
+            <h2 class="section-title">Нейросети и инструменты</h2>
+            <p class="section-desc">Быстрые ссылки на ИИ-сервисы (добавьте свои URL в код)</p>
+            <div class="ai-buttons-grid">
+                <!-- Добавьте свои ссылки в href -->
+                <a href="https://www.reve.com/" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🤖</span>
+                    <span class="ai-name">Reve 2.0</span>
+                </a>
+                <a href="https://docs.google.com/videos/create" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🎨</span>
+                    <span class="ai-name">Vids</span>
+                </a>
+                <a href="https://notebooklm.google.com/notebook/8db72fd1-58be-4681-a036-2701390b884e" class="ai-btn" target="_blank">
+                    <span class="ai-icon">📝</span>
+                    <span class="ai-name">NotebookLM</span>
+                </a>
+                <a href="https://www.kimi.com/chat/19ec01cf-fee2-8126-8000-09785870f589?chat_enter_method=history" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🔍</span>
+                    <span class="ai-name">Kimi AI</span>
+                </a>
+                <a href="https://elevenlabs.io/app/home" class="ai-btn" target="_blank">
+                    <span class="ai-icon">💻</span>
+                    <span class="ai-name">ElevenLabs</span>
+                </a>
+                <a href="https://math-gpt.org/" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🎵</span>
+                    <span class="ai-name">MathGPT</span>
+                </a>
+                <a href="https://www.deepl.com/en/products/voice" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🎬</span>
+                    <span class="ai-name">Deepl</span>
+                </a>
+                <a href="https://www.perplexity.ai/" class="ai-btn" target="_blank">
+                    <span class="ai-icon">📊</span>
+                    <span class="ai-name">Perplexity</span>
+                    <a href="https://consensus.app/" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🎬</span>
+                    <span class="ai-name">Consensus</span>
+                    <a href="https://claude.ai/" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🤖</span>
+                    <span class="ai-name">Claude</span>
+                </a>
+                      <a href="https://canva.link/pawk1xl1iqesmpp" class="ai-btn" target="_blank">
+                    <span class="ai-icon">🎨</span>
+                    <span class="ai-name">Presentation</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Quick Copy Fields -->
+        <section class="copy-section">
+            <h2 class="section-title">Быстрое копирование</h2>
+            <p class="section-desc">Текстовые шаблоны для быстрого копирования</p>
+            
+            <div class="copy-grid">
+                <div class="copy-card">
+                    <label>Промпт #1</label>
+                    <textarea class="copy-field" id="copy1" readonly>Здесь ваш текст для копирования. Нажмите кнопку справа, чтобы скопировать.</textarea>
+                    <button class="copy-btn" onclick="copyText('copy1')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Копировать
+                    </button>
+                </div>
+
+                <div class="copy-card">
+                    <label>Промпт #2</label>
+                    <textarea class="copy-field" id="copy2" readonly>Ещё один шаблон текста. Редактируйте содержимое в коде HTML.</textarea>
+                    <button class="copy-btn" onclick="copyText('copy2')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Копировать
+                    </button>
+                </div>
+
+                <div class="copy-card">
+                    <label>Код доступа</label>
+                    <input type="text" class="copy-field single" id="copy3" value="usr_4821-BERIK-2026" readonly>
+                    <button class="copy-btn" onclick="copyText('copy3')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Копировать
+                    </button>
+                </div>
+
+                <div class="copy-card">
+                    <label>API ключ</label>
+                    <input type="text" class="copy-field single" id="copy4" value="sk-log-4821-xxxx-xxxx" readonly>
+                    <button class="copy-btn" onclick="copyText('copy4')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Копировать
+                    </button>
+                </div>
+
+                <div class="copy-card wide">
+                    <label>Шаблон отчёта</label>
+                    <textarea class="copy-field" id="copy5" readonly>Дата: [ДАТА]
+Объект: Berik Lyubovsky (usr_4821)
+Платформа: [ПЛАТФОРМА]
+Действие: [ДЕЙСТВИЕ]
+Результат: [РЕЗУЛЬТАТ]
+Статус: Зафиксировано</textarea>
+                    <button class="copy-btn" onclick="copyText('copy5')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Копировать
+                    </button>
+                </div>
+
+                <div class="copy-card wide">
+                    <label>Заметки</label>
+                    <textarea class="copy-field editable" id="copy6" placeholder="Введите свои заметки здесь..."></textarea>
+                    <button class="copy-btn" onclick="copyText('copy6')">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="9" y="9" width="13" height="13" rx="2"/>
+                            <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+                        </svg>
+                        Копировать
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Personal Activity Log -->
+        <section class="log-section">
+            <div class="section-header">
+                <div>
+                    <h2>Личный журнал активности</h2>
+                    <p class="section-desc">Все действия Berik Lyubovsky</p>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="log-table">
+                    <thead>
+                        <tr>
+                            <th>Время</th>
+                            <th>Платформа</th>
+                            <th>Действие</th>
+                            <th>Контент</th>
+                            <th>Статус</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalLogBody">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+
+    <!-- Toast -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="profile.js"></script>
+</body>
+</html>
