@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOG — Вход в систему</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <!-- Header (как на основной странице) -->
+    <header class="header">
+        <div class="header-content">
+            <h1 class="logo">LOG</h1>
+            <h3 class="">by mason_lover</h3>
+            <div class="admin-profile">
+                <div class="avatar-wrapper">
+                    <img src="photo_5291985963577973198_w.jpg" alt="Оператор" class="avatar">
+                    <span class="status-indicator"></span>
+                </div>
+                <span class="admin-name">Система</span>
+            </div>
+        </div>
+        <canvas id="waveCanvas" class="wave-canvas"></canvas>
+    </header>
+
+    <!-- Main Content (белая область) -->
+    <main class="main-content">
+        <div class="login-box">
+            <div class="login-header">
+                <h2>Авторизация</h2>
+                <p>Введите данные оператора для доступа к системе</p>
+            </div>
+
+            <form class="login-form" id="loginForm">
+                <div class="input-group">
+                    <label for="username">Имя оператора</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                            <circle cx="12" cy="7" r="4"/>
+                        </svg>
+                        <input 
+                            type="text" 
+                            id="username" 
+                            name="username" 
+                            placeholder="Введите имя оператора"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="password">Пароль доступа</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                        </svg>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Введите пароль"
+                            autocomplete="current-password"
+                            required
+                        >
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="20" height="20">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                <circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="accessLevel">Уровень доступа</label>
+                    <div class="input-wrapper">
+                        <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                        </svg>
+                        <select id="accessLevel" name="accessLevel" required>
+                            <option value="" disabled selected>Выберите уровень</option>
+                            <option value="analyst">Аналитик</option>
+                            <option value="operator">Оператор</option>
+                            <option value="admin">Администратор</option>
+                        </select>
+                        <svg class="select-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="6 9 12 15 18 9"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="login-options">
+                    <label class="remember-me">
+                        <input type="checkbox" id="rememberMe" name="rememberMe">
+                        <span class="checkmark"></span>
+                        <span>Запомнить меня</span>
+                    </label>
+                    <a href="#" class="forgot-link">Забыли пароль?</a>
+                </div>
+
+                <button type="submit" class="login-btn" id="loginBtn">
+                    <span class="btn-text">Войти в систему</span>
+                    <span class="btn-loader"></span>
+                </button>
+            </form>
+
+            <div class="login-footer-info">
+                <div class="security-line">
+                    <span class="dot green"></span>
+                    <span>Соединение защищено</span>
+                </div>
+                <div class="system-line">
+                    <span class="dot green"></span>
+                    <span>Система онлайн</span>
+                    <span class="dot yellow"></span>
+                    <span>4 объекта на наблюдении</span>
+                </div>
+                <p class="version">LOG Monitoring System v2.4.1</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Toast -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <script src="login.js"></script>
+</body>
+</html>
